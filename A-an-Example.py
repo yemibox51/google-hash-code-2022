@@ -26,6 +26,13 @@ def return_objs(filename):
         return [proj_info, contrib]
 
 
-return_objs("a_an_example.in.txt")
-
-
+[projects, people] = return_objs("a_an_example.in.txt")
+"""
+output:
+num_proj_completed: int
+for proj in num of projs// output:
+    name_of_projc_completed:
+    name1 nam3
+## things to note:
+#   order matters when we created the project skills dict proj_info[4]
+    """
