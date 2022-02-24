@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 from typing import OrderedDict
 
@@ -51,3 +52,11 @@ for proj in num of projs// output:
     """
 
 
+=======
+# Open file in read mode
+# Going to change need to submit a text file of the data later 
+a = open("a_an_example.in.txt", 'r')
+
+# prints the entire file
+print(a.read())
+>>>>>>> parent of 4fb0ea9 (Merge branch 'main' of https://github.com/yemibox51/google-hash-code-2022)
