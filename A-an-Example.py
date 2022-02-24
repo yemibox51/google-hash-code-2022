@@ -1,4 +1,7 @@
 
+from typing import OrderedDict
+
+
 def return_objs(filename):
     with open (filename,"r") as f:
         people, proj = f.readline().split(" ")
@@ -14,7 +17,7 @@ def return_objs(filename):
 
         for i in range(int(proj)):
             proj_name, days, score, best_before, roles = f.readline().split(" ")
-            proj_info[proj_name] = [int(days), int(score), int(best_before), int(roles), {}]
+            proj_info[proj_name] = [int(days), int(score), int(best_before), int(roles), OrderedDict()]
             
             for role in range(int(roles)):
                 skill, lvl = f.readline().split(" ")
@@ -28,6 +31,16 @@ def return_objs(filename):
 
 [projects, people] = return_objs("a_an_example.in.txt")
 """
+
+DS info:
+conrib = {}
+people[name] = {skill : skill_lvl}
+projects[name] = [days, score_awarded, best_before, {roles}]
+
+roles is an ordered dict
+roles[skill] = skill_lvl
+
+
 output:
 num_proj_completed: int
 for proj in num of projs// output:
@@ -36,3 +49,5 @@ for proj in num of projs// output:
 ## things to note:
 #   order matters when we created the project skills dict proj_info[4]
     """
+
+
